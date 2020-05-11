@@ -2,7 +2,7 @@
 
 
 
-Plante::Plante(std::string name) :_name(name), _hydro(3), _health(3), _age(0), _cropStatu(4), _fertilizerReceived(false), _isAlive(true)
+Plante::Plante(std::string name) :_name(name), _hydro(5), _health(3), _age(0), _cropStatu(4), _fertilizerReceived(false), _isAlive(true)
 {};
 
 void Plante::print(){
