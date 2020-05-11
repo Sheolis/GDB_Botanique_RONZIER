@@ -2,7 +2,7 @@
 
 
 
-Plante::Plante(std::string name) :_name(name), _hydro(5), _health(5), _age(0)
+Plante::Plante(std::string name) :_name(name), _hydro(5), _health(5), _age(0), _fertilizerReceived(false), _isAlive(true)
 {};
 
 void Plante::print(){
@@ -29,6 +29,8 @@ void Plante::grow(){
 }
 
 void Plante::timeIteration(){
+        _fertilizerReceived = false;
+        _cropStatu += -0.5;
         _hydro -= 0.5;
         if(_hydro >= 7){
             if(_hydro >= 9){
@@ -43,5 +45,27 @@ void Plante::timeIteration(){
                     _health += -0.5;
             }
         }
-        this->print();
+        if (_health <= 0){
+            _isAlive = false;
+            std::cout << _name << "died" << std::endl;
+        }else{
+             this->print();
+        }
+}
+
+void Plante::hydrate(){
+        _hydro += 2;
+}
+
+void Plante::fertilize(){
+        _health += 0.5;
+}
+
+void Plante::crop(){
+    _cropStatu += 1;
+    if (_cropStatu > 2){
+            _health += -0.5;
+    }else if(_cropStatu >5){
+            _health += -1;
+    }
 }
