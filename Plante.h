@@ -9,11 +9,12 @@
 class Plante {
         private:
             std::string _name;
-            int _hydro; //0 to 10
-            int _health; // 0 to 10
+            float _hydro; //0 to 10
+            float _health; // 0 to 10
             float _age; // 0 to ++
         public:
             void grow();
+            void timeIteration();
             void print();
             Plante(std::string nom);
 };

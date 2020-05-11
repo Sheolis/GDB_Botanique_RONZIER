@@ -15,5 +15,6 @@ int main()
         filicaria->print();
         filicaria->grow();
         filicaria->print();
+        filicaria->timeIteration();
        
 }
