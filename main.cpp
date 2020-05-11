@@ -3,8 +3,7 @@
 #else
 #include <unistd.h>
 #endif
-#include "Animal.h"
-#include "Chaton.h"
+#include "Plante.h"
 #include <time.h>
 using namespace std;
 
@@ -12,9 +11,10 @@ int main()
 {
 
         srand (time(NULL));
-        Animal* bob = new Animal("Bob");
-        Chaton* eric = new Chaton("Eric");
-        Animal* atlanta = new Animal("Opposum");
-        bob->jouer();
-        eric->jouer();
+        Plante* filicaria = new Plante("filicaria");
+        filicaria->print();
+        filicaria->grow();
+        filicaria->print();
+        filicaria->timeIteration();
+       
 }
