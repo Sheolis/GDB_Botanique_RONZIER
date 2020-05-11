@@ -17,5 +17,6 @@ int main()
         bob->buy("sativa");
         bob->buy("filicaria");
         bob->printGreenHouse();
+        bob->action();
        
 }

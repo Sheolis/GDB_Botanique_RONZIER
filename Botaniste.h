@@ -12,14 +12,17 @@ class Botaniste{
             std::string _name;
             int _money;
             std::vector <Plante*> _greenhouse;
-        public :
-            Botaniste(std::string name);
-            void sleep();
-            void buy(std::string name);
+            int _fertilizers;
             void sell(Plante plante);
-            void action();
             void print();
             void printGreenHouse();
+            void sleep();
+            void buy(std::string name);
+
+        public :
+            Botaniste(std::string name);
+            void action();
+            
 
 
 };

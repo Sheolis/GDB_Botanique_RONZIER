@@ -23,6 +23,8 @@ class Plante {
             void print();
             void hydrate();
             void crop();
+            std::string getName();
+            float getAge();
 
 };
 

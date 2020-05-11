@@ -9,7 +9,7 @@ void Plante::print(){
         std::cout << "Specie : " << _name << std::endl
                 << "Hydratation : " << _hydro << std::endl
                 << "Health : " << _health << std::endl
-                << "Age : " << _age << std::endl;
+                << "Age : " << _age << std::endl << std::endl;
 }
 
 void Plante::grow(){
@@ -69,3 +69,5 @@ void Plante::crop(){
             _health += -1;
     }
 }
+
+std::string Plante::getName(){ return _name; };
