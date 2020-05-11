@@ -4,19 +4,16 @@
 #include <unistd.h>
 #endif
 #include "Plante.h"
+#include "Botaniste.h"
 #include <time.h>
+
 using namespace std;
 
 int main()
 {
 
         srand (time(NULL));
-        Plante* filicaria = new Plante("filicaria");
-        filicaria->print();
-        filicaria->grow();
-        filicaria->print();
-        filicaria->timeIteration();
-        filicaria->hydrate();
-        filicaria->print();
+        Botaniste* bob = new Botaniste("Bob");
+        bob->action();
        
 }
