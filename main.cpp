@@ -13,10 +13,7 @@ int main()
 {
 
         srand (time(NULL));
-        Plante* filicaria = new Plante("filicaria");
         Botaniste* bob = new Botaniste("Bob");
-        bob->buy("sativa");
-        bob->buy("filicaria");
         bob->action();
        
 }

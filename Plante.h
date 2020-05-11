@@ -25,6 +25,7 @@ class Plante {
             void crop();
             std::string getName();
             float getAge();
+            bool getDeathStatus();
 
 };
 
