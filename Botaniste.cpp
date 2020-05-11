@@ -111,8 +111,14 @@ void Botaniste::action(){
 }
 
 void Botaniste::sell(int i){
-        if(_greenhouse[i]->getAge()>=0){
+        if(_greenhouse[i]->getAge()>=5){
+                std::cout << "You have sold " << _greenhouse[i]->getName() << " for ";
                 _greenhouse.erase(_greenhouse.begin() + i);
-        
+                _money += 10 + 5*(_greenhouse[i]->getAge()-5)*(1 + 1/5);
+                std::cout << -(10 + 5*(_greenhouse[i]->getAge()-5)*(1 + 1/5)) << std::endl <<std::endl;
+
+        }else{
+            std::cout << "This plant is not enough aged" << std::endl << std::endl;
         }
+        this->action();
 }
