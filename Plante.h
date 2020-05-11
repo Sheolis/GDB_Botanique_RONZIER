@@ -12,11 +12,18 @@ class Plante {
             float _hydro; //0 to 10
             float _health; // 0 to 10
             float _age; // 0 to ++
+            bool _fertilizerReceived;
+            float _cropStatu;
+            bool _isAlive;
         public:
+            Plante(std::string nom);
+            void fertilize();
             void grow();
             void timeIteration();
             void print();
-            Plante(std::string nom);
+            void hydrate();
+            void crop();
+
 };
 
 #endif
