@@ -21,7 +21,7 @@ class Plante {
             void grow();
             void timeIteration();
             void print();
-            void hydrate();
+            void water();
             void crop();
             std::string getName();
             float getAge();

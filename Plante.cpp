@@ -53,7 +53,7 @@ void Plante::timeIteration(){
         }
 }
 
-void Plante::hydrate(){
+void Plante::water(){
         _hydro += 2;
 }
 
@@ -71,3 +71,4 @@ void Plante::crop(){
 }
 
 std::string Plante::getName(){ return _name; };
+float Plante::getAge(){ return _age; };

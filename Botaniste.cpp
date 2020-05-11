@@ -12,7 +12,7 @@ void Botaniste::printGreenHouse(){
         for( int i= 0; i < _greenhouse.size(); i++ ){
             _greenhouse[i]->print();
         }
-        std::cout << endl;
+        std::cout << std::endl;
 }
 
 void Botaniste::buy(std::string name){
@@ -64,18 +64,19 @@ void Botaniste::action(){
                 std::cin >> plant2sell;
                 for( int i= 0; i < _greenhouse.size(); i++ ){
                                 if (_greenhouse[i]->getName() == plant2sell){
-                                        
+                                        this->sell(i);
                                 }
                         }
+                this->action();
         }else if(choice == 3){//water a plant
                 std::cout << "Which plant do you want to water ?" << std::endl << std::endl;
                 this->printGreenHouse();
                 std::string plant2water;
                 std::cin >> plant2water;
                 for( int i= 0; i < _greenhouse.size(); i++ ){
-                                if (_greenhouse[i]->getName() == plant2fert){
+                                if (_greenhouse[i]->getName() == plant2water){
                                         _greenhouse[i]->water();
-                                        std::cout << _greenhouse[i].getName() <<" has been watered." << std::endl << std::endl;  
+                                        std::cout << _greenhouse[i]->getName() <<" has been watered." << std::endl << std::endl;  
                                 }
                         }
                 this->action();
@@ -109,8 +110,9 @@ void Botaniste::action(){
 
 }
 
-void Botanist::sell(int i){
-        if(plante->getAge()>=5){
-
+void Botaniste::sell(int i){
+        if(_greenhouse[i]->getAge()>=0){
+                _greenhouse.erase(_greenhouse.begin() + i);
+        
         }
 }
