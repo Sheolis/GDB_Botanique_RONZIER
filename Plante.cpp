@@ -13,20 +13,18 @@ void Plante::print(){
 }
 
 void Plante::grow(){
-        if(_health >= 5){
-                if(_hydro >= 5){
-                    _age += -0.1*(5 + _hydro) +2;
-                }
-                else{
-                    _age += -0.1*(15 - _hydro) +2;
-                }
-        }else{
-                if(_hydro >= 5){
-                    _age += -0.1*( _hydro) +2;
-                }
-                else{
-                    _age += -0.1*(10 - _hydro) +2;
-                }
+        if(_health >= 7){
+            if(_health >= 9){
+                    _age += 2;
+            }else{
+                    _age += 1;
+            }
+        }else if(_health <= 3){
+            if(_health <= 1){
+                    _age += 0;
+            }else{
+                    _age += 0.5;
+            }
         }
 }
 
